@@ -10,6 +10,8 @@ interface MusicVideo {
   thumbnail: string
   title: string
   created_at: string
+  click_count: number
+  is_hidden: boolean
 }
 
 export default async function HomePage() {
@@ -18,6 +20,8 @@ export default async function HomePage() {
   const { data: videos, error } = await supabase
     .from("music_videos")
     .select("*")
+    .eq("is_hidden", false)
+    .order("click_count", { ascending: false })
     .order("created_at", { ascending: false })
 
   const musicVideos = (videos as MusicVideo[]) || []

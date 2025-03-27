@@ -23,7 +23,8 @@ const config: Config = {
   			},
   			primary: {
   				DEFAULT: 'hsl(var(--primary))',
-  				foreground: 'hsl(var(--primary-foreground))'
+  				foreground: 'hsl(var(--primary-foreground))',
+  				hover: 'hsl(var(--primary-hover))'
   			},
   			secondary: {
   				DEFAULT: 'hsl(var(--secondary))',
@@ -88,6 +89,33 @@ const config: Config = {
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out'
+  		},
+  		transitionProperty: {
+  			'colors': 'color, background-color, border-color, text-decoration-color, fill, stroke',
+  			'spacing': 'margin, padding',
+  			'transform': 'transform',
+  			'opacity': 'opacity',
+  			'shadow': 'box-shadow',
+  			'filter': 'filter',
+  			'backdrop-filter': 'backdrop-filter',
+  		},
+  		transitionDuration: {
+  			'DEFAULT': '300ms',
+  			'75': '75ms',
+  			'100': '100ms',
+  			'150': '150ms',
+  			'200': '200ms',
+  			'300': '300ms',
+  			'500': '500ms',
+  			'700': '700ms',
+  			'1000': '1000ms',
+  		},
+  		transitionTimingFunction: {
+  			'DEFAULT': 'cubic-bezier(0.4, 0, 0.2, 1)',
+  			'linear': 'linear',
+  			'in': 'cubic-bezier(0.4, 0, 1, 1)',
+  			'out': 'cubic-bezier(0, 0, 0.2, 1)',
+  			'in-out': 'cubic-bezier(0.4, 0, 0.2, 1)',
   		}
   	}
   },
